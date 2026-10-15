@@ -5,7 +5,19 @@
   "license": "GPL-3.0-or-later",
   "type": "module",
   "svelte": "./src/index.ts",
-  "exports": { ".": { "svelte": "./src/index.ts", "default": "./src/index.ts" }, "./theme.css": "./src/theme.css" },
-  "files": ["src"],
-  "peerDependencies": { "svelte": "^5.0.0" }
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "svelte": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./theme.css": "./src/theme.css"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "types": "./src/index.d.ts"
 }
