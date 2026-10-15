@@ -1,0 +1,11 @@
+{
+  "name": "@neutron/ui",
+  "version": "0.1.0",
+  "description": "Shared theme and app rail for the Neutron apps (Mail, Meeting, Drive)",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "svelte": "./src/index.ts",
+  "exports": { ".": { "svelte": "./src/index.ts", "default": "./src/index.ts" }, "./theme.css": "./src/theme.css" },
+  "files": ["src"],
+  "peerDependencies": { "svelte": "^5.0.0" }
+}
