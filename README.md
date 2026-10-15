@@ -2,7 +2,7 @@
 
 Shared look for the Neutron apps: Neutron Mail, Neutron Meeting and Neutron Drive.
 
-- `src/theme.css` is the theme: a violet accent (`#6d4aff`), dark and light palettes chosen with `data-theme` on `<html>`, a 10px radius, and Inter or Cantarell type.
+- `src/theme.css` is the theme (base variables, reset, form controls, `.btn`, `.icon-btn`; app-specific variables stay in each app): a violet accent (`#6d4aff`), dark and light palettes chosen with `data-theme` on `<html>`, a 10px radius, and Inter or Cantarell type.
 - `AppRail.svelte` is the left app rail.
 - `Icon.svelte` is the shared icon set.
 

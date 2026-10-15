@@ -4,11 +4,11 @@
 }
 :root[data-theme="dark"] {
   --bg: #16141c; --panel: #1c1a23; --panel-2: #23202c; --border: #2e2a3a; --text: #ece9f5;
-  --muted: #9a95ab; --hover: #2a2735; --selected: #2f2944; --unread: #a995ff; color-scheme: dark;
+  --muted: #9a95ab; --hover: #2a2735; --selected: #2f2944; color-scheme: dark;
 }
 :root[data-theme="light"] {
   --bg: #f4f3f8; --panel: #ffffff; --panel-2: #f8f7fc; --border: #e4e1ee; --text: #1c1a23;
-  --muted: #6c6780; --hover: #f0edf8; --selected: #ebe5ff; --unread: #6d4aff; color-scheme: light;
+  --muted: #6c6780; --hover: #f0edf8; --selected: #ebe5ff; color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body, #app { margin: 0; height: 100%; background: var(--bg); color: var(--text); }

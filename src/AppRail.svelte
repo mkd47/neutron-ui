@@ -2,20 +2,20 @@
   // Shared Neutron app rail. Each app passes its own sections.
   // SPDX-License-Identifier: GPL-3.0-or-later
   import Icon from "./Icon.svelte";
-  type Item = { id: string; icon: string; label: string };
+  import type { RailItem as Item } from "./index";
   let { items, active, theme, onSelect, onToggleTheme, logo = "N" }:
     { items: Item[]; active: string; theme: "dark" | "light"; onSelect: (id: string) => void; onToggleTheme: () => void; logo?: string } = $props();
 </script>
 
 <nav class="rail" aria-label="Apps">
-  <span class="logo">{logo}</span>
+  <span class="logo" aria-hidden="true">{logo}</span>
   {#each items as it (it.id)}
     <button class="rbtn" class:active={active === it.id} aria-current={active === it.id ? "page" : undefined} onclick={() => onSelect(it.id)}>
       <Icon name={it.icon} size={20} /><span>{it.label}</span>
     </button>
   {/each}
   <span class="spacer"></span>
-  <button class="rbtn" title="Toggle theme" aria-label="Toggle theme" onclick={onToggleTheme}><Icon name={theme === "dark" ? "sun" : "moon"} size={18} /></button>
+  <button class="rbtn" title={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"} aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"} onclick={onToggleTheme}><Icon name={theme === "dark" ? "sun" : "moon"} size={18} /></button>
 </nav>
 
 <style>
